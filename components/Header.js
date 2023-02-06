@@ -1,8 +1,12 @@
 import Image from "next/image";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
+import AuthContext from "../stores/authContext";
+import { useContext } from "react";
 
 export default function HeaderComponent() {
+  const { user, logout } = useContext(AuthContext);
+  console.log("🚀 ~ file: Header.js:9 ~ HeaderComponent ~ user", user);
   return (
     <>
       <nav className={styles.nav_container}>
@@ -20,7 +24,11 @@ export default function HeaderComponent() {
           <Link href="/explore">
             <span>Explore</span>
           </Link>
-          {/* <button className={styles.login_button}>Login/Signup</button> */}
+          {user && (
+            <button className={styles.login_button} onClick={logout}>
+              Logout
+            </button>
+          )}
         </div>
       </nav>
     </>
