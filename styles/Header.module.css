@@ -1,0 +1,30 @@
+.title_div {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+.nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid #19d038; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.links span {
+  margin: 0px 5px;
+  color: #19d038;
+  text-decoration: none;
+}
+.login_button {
+  cursor: pointer;
+  height: 45px;
+  color: #19d038;
+  font-size: 15px;
+  font-weight: 800;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid #19d038;
+  font-family: 'Poppins';
+  margin: 0px 10px;
+}
